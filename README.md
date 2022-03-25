@@ -23,13 +23,14 @@ Medium would have obstacles, labeled “|”,  inside the N x N space.
 
 Hard would have more obstacles and poisonous food represented as “=”.
 
-RNG element: food and obstacles spawn randomly
+1. RNG element: food and obstacles spawn randomly
 
-Data structures to store game state: arrays
+2. Data structures to store game state: arrays
 
-Dynamic memory management: needed since the snake will always move without stopping. So have to update the array every unit time 
+3. Dynamic memory management: needed since the snake will always move without stopping. So have to update the array every unit time 
 
-Input/output: User has to direct the snake itself
+4. Input/output: User has to direct the snake itself
+
 The game will be saved in the files, so users can resume the game. High Scores will be stored in the files with the player's name.
 
 When the game is over, a message will be printed on screen.
