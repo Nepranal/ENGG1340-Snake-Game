@@ -31,7 +31,7 @@ Hard would have more obstacles and poisonous food represented as “=”.
 
 4. Input/output: User has to direct the snake itself
 
-The game will be saved in the files, so users can resume the game. High Scores will be stored in the files with the player's name.
+5. The game will be saved in the files, so users can resume the game. High Scores will be stored in the files with the player's name.
 
 When the game is over, a message will be printed on screen.
 
