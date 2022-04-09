@@ -43,3 +43,10 @@ Food with different symbol that will increase the speed of snake.
 Food that will reduce the length of the snake while the score remains the same.
 Food with different symbol that has more points than other.
 
+To create and play the game:
+Download the file zip
+extract the file
+open terminal
+go to directory with all the files
+$make snake
+$./snake
