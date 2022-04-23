@@ -50,4 +50,5 @@ open terminal
 go to directory with all the files
 
 $make snake
+
 $./snake
