@@ -48,5 +48,6 @@ Download the file zip
 extract the file
 open terminal
 go to directory with all the files
+
 $make snake
 $./snake
