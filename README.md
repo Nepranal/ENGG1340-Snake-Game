@@ -1,5 +1,6 @@
 # ENGG1340-Snake-Game
 HKU ENGG1340 coursework
+<<<<<<< HEAD
 
 Team Number: 10
 
@@ -50,3 +51,5 @@ open terminal
 go to directory with all the files
 $make snake
 $./snake
+=======
+>>>>>>> 18d8154152cc2ac2d314b737e42eceaf76906238
