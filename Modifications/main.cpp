@@ -127,6 +127,5 @@ void menu(){
 }
 int main(){
     menu();
-    // Shaheer has such a sexy body
     return 0;
 }
