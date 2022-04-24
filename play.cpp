@@ -13,7 +13,7 @@ using namespace std;
 #include "updateboard.h"
 #include "printboard.h"
 
-void play(int space, string board[][50], vector<vector<int>> &snake_position, int foodposition[], int score){
+void play(int space, string board[][50], vector<vector<int>> &snake_position, int foodposition[], int& score){
     int snakelength=1,prevpos[2]={};
     char move;
     cout << "Score : " << score << endl;

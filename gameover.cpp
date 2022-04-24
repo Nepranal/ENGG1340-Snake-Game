@@ -37,4 +37,9 @@ void gameover(int space,string board[][50]){
     board[mid+1][mid+9]="G";
     
     printboard(space,board);
+    
+    cout << "Press any key to continue.\n";
+    cin.ignore();
+    cin.get();
+    system("clear");
 }

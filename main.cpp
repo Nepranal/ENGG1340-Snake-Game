@@ -3,6 +3,8 @@
 #include <ctime>
 #include <string>
 #include <vector>
+#include <fstream>
+#include <iomanip>
 
 using namespace std;
 
@@ -10,6 +12,7 @@ vector <vector<int>> snake_position={};
 int space=0, foodposition[2]={{}};
 string board[50][50]={};
 int score = 0;
+string gamemode;
 
 #include "createboard.h"
 #include "printboard.h"
@@ -17,9 +20,11 @@ int score = 0;
 #include "spawnfood.h"
 #include "gameover.h"
 #include "play.h"
+#include "highscores.h"
 
 #define HEART   "\xE2\x99\xA5"
 #define DIAMOND "\xE2\x99\xA6"
+
 
 void menu(){
     cout << "\n____________________WELCOME TO SNAKE GAME_____________________\n";
@@ -31,7 +36,8 @@ void menu(){
     cout << "4. Quit\n\n";
     cout << "Enter Menu Option.\n";
     string option;
-    string choice;
+    string playername;
+    string display_score;
     cin >> option;
     if (option == "1"){
         system("clear");
@@ -41,8 +47,8 @@ void menu(){
         cout << "3. Hard\n";
         cout << "4. Return to Main Menu.\n\n";
         cout << "Choose Mode.\n";
-        cin >> choice;
-        if (choice == "1"){
+        cin >> gamemode;
+        if (gamemode == "1"){
             system("clear");
             space=25;
             snake_position.push_back({space/2,space/2});
@@ -52,8 +58,10 @@ void menu(){
             printboard(space,board);
             play(space,board, snake_position, foodposition, score); 
             gameover(space,board);
+            highscores(gamemode,score);
+            
         }
-        else if (choice == "2"){
+        else if (gamemode == "2"){
             system("clear");
             space=25;
             snake_position.push_back({space/2,space/2});
@@ -63,8 +71,9 @@ void menu(){
             printboard(space,board);
             play(space,board, snake_position, foodposition, score); 
             gameover(space,board);
+            highscores(gamemode,score);
         }
-        else if (choice == "3"){
+        else if (gamemode == "3"){
             system("clear");
             space=25;
             snake_position.push_back({space/2,space/2});
@@ -74,8 +83,10 @@ void menu(){
             printboard(space,board);
             play(space,board, snake_position, foodposition, score); 
             gameover(space,board);
+            highscores(gamemode,score);
+            
         }
-        else if (choice == "4"){
+        else if (gamemode == "4"){
             system("clear");
             menu();
         }
@@ -109,10 +120,46 @@ void menu(){
         menu();
     }
     else if (option == "3"){
-        
+        system("clear");
+        cout << "WELCOME TO WALL OF FAME!\n\n";
+        cout << "EASY MODE HISHSCORE\n";
+        ifstream fin_1("highscores_easy.txt");
+        if (fin_1.fail()){
+            cout << "Error in File Opening!" << endl;
+            exit(1);
+        }
+        fin_1 >> playername >> display_score;
+        cout << left;
+        cout << setw(10) << playername << setw(5) << display_score << endl << endl;
+        fin_1.close();
+        cout << "MEDIUM MODE HISHSCORE\n";
+        ifstream fin_2("highscores_medium.txt");;
+        if (fin_2.fail()){
+            cout << "Error in File Opening!" << endl;
+            exit(1);
+        }
+        fin_2 >> playername >> display_score;
+        cout << left;
+        cout << setw(10) << playername << setw(5) << display_score << endl << endl;
+        fin_2.close();
+        cout << "HARD MODE HISHSCORE\n";
+        ifstream fin_3("highscores_hard.txt");;
+        if (fin_3.fail()){
+            cout << "Error in File Opening!" << endl;
+            exit(1);
+        }
+        fin_3 >> playername >> display_score;
+        cout << left;
+        cout << setw(10) << playername << setw(5) << display_score << endl << endl;
+        fin_3.close();
+        cout << "Press any key to continue.\n";
+        cin.ignore();
+        cin.get();
+        system("clear");
+        menu();
     }
     else if (option == "4"){
-        
+        exit(1);
     }
     else {
         system("clear");

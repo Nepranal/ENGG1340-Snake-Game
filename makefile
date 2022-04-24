@@ -13,7 +13,7 @@ gameover.o: gameover.cpp createboard.h printboard.h
 inc_snake.o: inc_snake.cpp inc_snake.h
 	g++ -pedantic-errors -std=c++11 -c inc_snake.cpp
 
-main.o: main.cpp createboard.h printboard.h updateboard.h spawnfood.h gameover.h play.h
+main.o: main.cpp createboard.h printboard.h updateboard.h spawnfood.h gameover.h play.h highscores.h
 	g++ -pedantic-errors -std=c++11 -c main.cpp
 
 movebody.o: movebody.cpp delete_prev_snake.h
@@ -43,5 +43,8 @@ spawnfood.o: spawnfood.cpp spawnfood.h
 updateboard.o: updateboard.cpp updateboard.h
 	g++ -pedantic-errors -std=c++11 -c updateboard.cpp
 
-snake: main.o play.o updateboard.o spawnfood.o snakebit_itself2.o snake_position_regulator.o printboard.o movesnake.o movehead.o movebody.o inc_snake.o gameover.o foodeaten.o delete_prev_snake.o createboard.o
+highscores.o: highscores.cpp highscores.h
+	g++ -pedantic-errors -std=c++11 -c highscores.cpp
+
+snake: main.o  highscores.o play.o updateboard.o spawnfood.o snakebit_itself2.o snake_position_regulator.o printboard.o movesnake.o movehead.o movebody.o inc_snake.o gameover.o foodeaten.o delete_prev_snake.o createboard.o
 	g++ -pedantic-errors -std=c++11 $^ -o snake
