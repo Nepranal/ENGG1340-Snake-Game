@@ -22,18 +22,20 @@ void highscores(string gamemode, int& score){
         fin >> name >> highscore;
         fin.close();
         if (highscore < score){
-            ofstream fout("highscores_easy.txt");
-            if (fout.fail()){
-                cout << "Error in File Opening!";
-                exit(1);
-            }
             system("clear");
             cout << "______________________CONGRATULATIONS______________________\n\n";
             cout << "NICE MOVES! NOW WELCOME TO WALL OF FAME!\n\n";
             cout << "ENTER YOUR FIRST NAME ONLY.\n";
             cin >> name;
-            fout << name << " " << score << endl;
-            fout.close();
+            if (name.length() != 0){
+                ofstream fout("highscores_easy.txt");
+                if (fout.fail()){
+                    cout << "Error in File Opening!";
+                    exit(1);
+                }
+                fout << name << " " << score << endl;
+                fout.close();
+            }
             cout << endl <<"WELCOME!\n\n";
             cout << "Press any key to exit.\n";
             cin.ignore();
@@ -49,18 +51,20 @@ void highscores(string gamemode, int& score){
         fin >> name >> highscore;
         fin.close();
         if (highscore < score){
-            ofstream fout("highscores_medium.txt");
-            if (fout.fail()){
-                cout << "Error in File Opening!";
-                exit(1);
-            }
             system("clear");
             cout << "______________________CONGRATULATIONS______________________\n\n";
             cout << "NICE MOVES! NOW WELCOME TO WALL OF FAME!\n\n";
             cout << "ENTER YOUR FIRST NAME ONLY.\n";
             cin >> name;
-            fout << name << " " << score << endl;
-            fout.close();
+            if (name.length() != 0){
+                ofstream fout("highscores_medium.txt");
+                if (fout.fail()){
+                    cout << "Error in File Opening!";
+                    exit(1);
+                }
+                fout << name << " " << score << endl;
+                fout.close();
+            }
             cout << endl <<"WELCOME!\n\n";
             cout << "Press any key to exit.\n";
             cin.ignore();
@@ -76,19 +80,21 @@ void highscores(string gamemode, int& score){
         fin >> name >> highscore;
         fin.close();
         if (highscore < score){
-            ofstream fout("highscores_hard.txt");
-            if (fout.fail()){
-                cout << "Error in File Opening!";
-                exit(1);
-            }
             system("clear");
             cout << "______________________CONGRATULATIONS______________________\n\n";
             cout << "NICE MOVES! NOW WELCOME TO WALL OF FAME!\n\n";
             cout << "ENTER YOUR FIRST NAME ONLY.\n";
             cin >> name;
-            fout << name << " " << score << endl;
-            fout.close();
-            cout << endl << "WELCOME!\n\n";
+            if (name.length() != 0){
+                ofstream fout("highscores_hard.txt");
+                if (fout.fail()){
+                    cout << "Error in File Opening!";
+                    exit(1);
+                }
+                fout << name << " " << score << endl;
+                fout.close();
+            }
+            cout << endl <<"WELCOME!\n\n";
             cout << "Press any key to exit.\n";
             cin.ignore();
             cin.get();

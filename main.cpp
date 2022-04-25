@@ -56,7 +56,7 @@ void menu(){
             updateboard(snake_position,board);
             spawnfood(space, foodposition,board);
             printboard(space,board);
-            play(space,board, snake_position, foodposition, score); 
+            play(space,board, snake_position, foodposition, score, gamemode); 
             gameover(space,board);
             highscores(gamemode,score);
             
@@ -69,7 +69,7 @@ void menu(){
             updateboard(snake_position,board);
             spawnfood(space, foodposition,board);
             printboard(space,board);
-            play(space,board, snake_position, foodposition, score); 
+            play(space,board, snake_position, foodposition, score, gamemode); 
             gameover(space,board);
             highscores(gamemode,score);
         }
@@ -81,7 +81,7 @@ void menu(){
             updateboard(snake_position,board);
             spawnfood(space, foodposition,board);
             printboard(space,board);
-            play(space,board, snake_position, foodposition, score); 
+            play(space,board, snake_position, foodposition, score, gamemode); 
             gameover(space,board);
             highscores(gamemode,score);
             
