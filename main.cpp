@@ -65,7 +65,7 @@ void menu(){
             system("clear");
             space=25;
             snake_position.push_back({space/2,space/2});
-            createboard(space,board);
+            special_createboard(space,board);
             updateboard(snake_position,board);
             spawnfood(space, foodposition,board);
             printboard(space,board);
@@ -77,7 +77,7 @@ void menu(){
             system("clear");
             space=25;
             snake_position.push_back({space/2,space/2});
-            createboard(space,board);
+            special_createboard(space,board);
             updateboard(snake_position,board);
             spawnfood(space, foodposition,board);
             printboard(space,board);

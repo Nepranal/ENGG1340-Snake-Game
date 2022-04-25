@@ -12,6 +12,7 @@ using namespace std;
 #include "spawnfood.h"
 #include "updateboard.h"
 #include "printboard.h"
+#include "barrier_collision.h"
 
 void play(int space, string board[][50], vector<vector<int>> &snake_position, int foodposition[], int& score){
     int snakelength=1,prevpos[2]={};
@@ -24,7 +25,7 @@ void play(int space, string board[][50], vector<vector<int>> &snake_position, in
     while(move != '1'){
       movesnake(move,snakelength,prevpos, snake_position, board, space);
       updateboard(snake_position,board);
-      if (snakebit_itself2(snakelength,snake_position)==true)
+      if (snakebit_itself2(snakelength,snake_position)==true || barrier_collision(board)==true)
         break;
       if(foodeaten(board,foodposition)==true){
           inc_snake(snakelength,prevpos,snake_position);
