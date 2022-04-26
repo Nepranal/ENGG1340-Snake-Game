@@ -9,8 +9,9 @@
 using namespace std;
 
 vector <vector<int>> snake_position={};
-int space=0, foodposition[2]={{}};
+int space=0, foodposition[2]={{}}, poisonposition[2]={{}};
 string board[50][50]={};
+int poison[50][50]={};
 int score = 0;
 string gamemode;
 
@@ -21,6 +22,7 @@ string gamemode;
 #include "gameover.h"
 #include "play.h"
 #include "highscores.h"
+#include "createpoison.h"
 
 #define HEART   "\xE2\x99\xA5"
 #define DIAMOND "\xE2\x99\xA6"
@@ -76,20 +78,22 @@ void menu(){
         else if (gamemode == "3"){
             system("clear");
             space=25;
+            createpoision(space, poison);
             snake_position.push_back({space/2,space/2});
             special_createboard(space,board);
             updateboard(snake_position,board);
             spawnfood(space, foodposition,board);
             printboard(space,board);
-            play(space,board, snake_position, foodposition, score, gamemode); 
+            hard_play(space,board, snake_position, foodposition, score, gamemode, poisonposition, poison); 
             gameover(space,board);
             highscores(gamemode,score);
-            
         }
+
         else if (gamemode == "4"){
             system("clear");
             menu();
         }
+
         else{
             system("clear");
             cout << "INVALID Mode Option!\n";

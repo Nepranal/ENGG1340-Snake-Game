@@ -4,12 +4,13 @@
 using namespace std;
 #define CLUB "\xE2\x99\xA3"
 #define BARRIER "\xE2\x98\x92"
+#define DIAMOND "\xE2\x99\xA6"
 
 
 void spawnfood(int space, int foodposition[], string board[][50]){
     srand(time(NULL));
     int random_point1=rand()%space,random_point2=rand()%space;
-    while(board[random_point1][random_point2] == "#" || board[random_point1][random_point2] == BARRIER ){
+    while(board[random_point1][random_point2] == "#" || board[random_point1][random_point2] == BARRIER || board[random_point1][random_point2] == DIAMOND ){
         random_point1=rand()%space;
         random_point2=rand()%space;
     }
