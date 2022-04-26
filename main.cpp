@@ -9,7 +9,7 @@
 using namespace std;
 
 vector <vector<int>> snake_position={};
-int space=0, foodposition[2]={{}}, poisonposition[2]={{}};
+int space=0, foodposition[2]={{}}, poisonposition[2]={{}}, fruitposition[2]={{}};
 string board[50][50]={};
 int poison[50][50]={};
 int score = 0;
@@ -84,7 +84,7 @@ void menu(){
             updateboard(snake_position,board);
             spawnfood(space, foodposition,board);
             printboard(space,board);
-            hard_play(space,board, snake_position, foodposition, score, gamemode, poisonposition, poison); 
+            hard_play(space,board, snake_position, foodposition, score, gamemode, poisonposition, poison, fruitposition); 
             gameover(space,board);
             highscores(gamemode,score);
         }
