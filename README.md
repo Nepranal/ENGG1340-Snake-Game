@@ -35,13 +35,13 @@ Hard would have more obstacles and poisonous food represented as “=”.
 
 When the game is over, a message will be printed on screen.
 
-Objective: survive as long as you can while evading to eat yourself. Once you have eaten a specific amount of food, you will be promoted to the next stage. 
+Objective: survive as long as you can while evading to eat yourself, hit barrier or eating poision. In Hard Mode, you need to eat food or other fruit/heart in a way that there are less poisions on the board and the board remains mostly clear so you can move snake easily.
 
 Several features will be included in game: (Optional)
-Food with different symbol that will slow the speed of the snake.
-Food with different symbol that will increase the speed of snake.
-Food that will reduce the length of the snake while the score remains the same.
-Food with different symbol that has more points than other.
+Food with different symbol that will increase the score.
+Poison with different symbol that will kill the snake.
+Barriers with different symbol. If you touch barrier, you will die.
+You can move around the board.
 
 To create and play the game:
 Download the file zip
