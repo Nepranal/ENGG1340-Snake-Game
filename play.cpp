@@ -582,6 +582,19 @@ void playGame(int gameMode){
 }
 
 
+//To initialize the board
+void initializePoison()
+{
+    for(int i=0;i<50;++i)
+    {
+        for(int j=0;j<50;++j)
+        {
+            poison[i][j]=0;
+        }
+    }
+}
+
+
 //1=Easy, 2=Medium, 3= Hard
 void play(int gameMode)
 {
@@ -589,8 +602,9 @@ void play(int gameMode)
 
     //Initializing
     snake_position={};
-    foodposition[2]={}; poisonposition[2]={}; poison[50][50]={}; fruitposition[2]={}; score=0; space=25;
+    foodposition[2]={}; fruitposition[2]={}; score=0; space=25;
     createboard(); //Initializing the board
+    initializePoison();//Initialize the poison array
 
     if (gameMode>0 && gameMode<4)
     {
