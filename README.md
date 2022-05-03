@@ -11,23 +11,24 @@ Game: The snake game
 Description:
 Player would be playing as a snake entity enclosed in an N x N space
 
+CS Server: academy11.cs.hku.hk
 
-The white dot represents the snake food in which when the snake eats it, it will increase in size.
+The CLUB represents the snake food in which when the snake eats it, it will increase in size.
 The snake can travel through the boundary of the N x N space passing through the “#” and come out of the other side within the space. 
 
 The game has 3 modes: Easy, Medium, and Hard.
 
 Easy will be similar to the picture presented before.
 
-Medium would have obstacles, labeled “|”,  inside the N x N space.
+Medium would have obstacles, labeled “\xE2\x98\x92”,  inside the N x N space.
 
-Hard would have more obstacles and poisonous food represented as “=”.
+Hard would have obstacles, poisonous food represented as “DIAMOND "\xE2\x99\xA6"”, and heart food represented as HEART "\xE2\x99\xA5".
 
-1. RNG element: food and obstacles spawn randomly
+1. RNG element: food and posions spawn randomly
 
 2. Data structures to store game state: arrays
 
-3. Dynamic memory management: needed since the snake will always move without stopping. So have to update the array every unit time 
+3. Dynamic memory management: Snake is a vector which is ammended as the game is played.
 
 4. Input/output: User has to direct the snake itself
 

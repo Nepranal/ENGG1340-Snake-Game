@@ -7,6 +7,7 @@ using namespace std;
 #include "showHighScores.h"
 #include "menu.h"
 
+// Funtion to print the menu. Outputs are strings.
 void printOptions()
 {
     cout << "\n____________________WELCOME TO SNAKE GAME_____________________\n";
@@ -20,7 +21,7 @@ void printOptions()
     cout << "Enter Menu Option.\n";
 }
 
-
+// Function to print the instructions. Outputs are strings.
 void showInstructions()
 {
         system("clear");
@@ -41,7 +42,7 @@ void showInstructions()
 }
 
 
-
+//Function which prints menu. Prompts user for menu option and redirects if wrong menu option given. It executes resspective functions according to menu option provided by user.
 void menu()
 {
     string option;

@@ -107,7 +107,7 @@ void updateboard(){
 }
 
 
-//Spawn snake food. Is randomized with time
+//Spawn snake food. Is randomized with time.
 void spawnfood(){
     srand(time(NULL));
     int random_point1=rand()%space,random_point2=rand()%space;
@@ -122,10 +122,10 @@ void spawnfood(){
 }
 
 
-//Spawn poison with an extra rule
+//Spawn poison with an extra rule.
 void spawnpoison(){
 
-    if ((score > 3) && (score % 2 != 0)){
+    if ((score > 3) && (score % 2 != 0)){   // The rule on when to spwan poison on board.
         int random_point1=rand()%space,random_point2=rand()%space;
         while(board[random_point1][random_point2]!=" " ){ 
             random_point1=rand()%space;
@@ -136,7 +136,7 @@ void spawnpoison(){
         board[random_point1][random_point2]= DIAMOND;
         poison[random_point1][random_point2]= -1;
     }
-    if (score % 3 == 0){
+    if (score % 3 == 0){  // The rule when to clean all the posions from the board.
         for(int i=0;i<space;++i){
             for(int j=0;j<space;++j){
                 if (board[i][j] == DIAMOND){
@@ -149,11 +149,11 @@ void spawnpoison(){
 }
 
 
-//Spawn fruit with rules
+//Spawn fruit with rules. Fruit is actually heart on board.
 void spawnfruit(){
     int count=0;
 
-    for(int i=0;i<space;++i){
+    for(int i=0;i<space;++i){ // Checks how many hearts are present on board.
         for(int j=0;j<space;++j){
             if (board[i][j] == HEART){
                 count++;
@@ -161,7 +161,7 @@ void spawnfruit(){
         }
     }
 
-    if (score % 5 == 0 && count == 0){
+    if (score % 5 == 0 && count == 0){ // The rule to spawn fruit/heart on board.
         int random_point1=rand()%space,random_point2=rand()%space;
         while(board[random_point1][random_point2]!=" " ){ 
             random_point1=rand()%space;
@@ -172,7 +172,7 @@ void spawnfruit(){
         board[random_point1][random_point2]= HEART;
     }
 
-    if (score % 4 == 0){
+    if (score % 4 == 0){ // The rule when to clean fruit/heart from the board.
         for(int i=0;i<space;++i){
             for(int j=0;j<space;++j){
                 if (board[i][j] == HEART){
@@ -185,7 +185,7 @@ void spawnfruit(){
 }
 
 
-//Checking if poison is eaten
+//Checking if poison is eaten. Returns true if eaten and false if not eaten.
 bool poisoneaten(){
     for(int i=0;i<space;++i){
         for(int j=0;j<space;++j){
@@ -200,7 +200,7 @@ bool poisoneaten(){
 }
 
 
-//Check if food has been eaten
+//Check if food has been eaten. Returns true if eaten and false if not eaten.
 bool foodeaten(){
     if (board[foodposition[0]][foodposition[1]]=="O"){
         return true;
@@ -210,7 +210,7 @@ bool foodeaten(){
 }
 
 
-//Check if fruit has been eaten
+//Check if fruit has been eaten. Returns true if eaten and false if not eaten.
 bool fruiteaten(){
     if (board[fruitposition[0]][fruitposition[1]] == "O")
     {
@@ -223,7 +223,7 @@ bool fruiteaten(){
 }
 
 
-//Cheking only for if the head went and inhibit the same space it bodies are on
+//Cheking only for if the head went and inhibit the same space it bodies are on. Means snake bit itself or not and return true/false accordingly.
 bool snakebit_itself2(){
     int pos1=snake_position[0][0],pos2=snake_position[0][1]; 
     for(int i=1;i<snake_position.size();++i){
@@ -235,7 +235,7 @@ bool snakebit_itself2(){
 }
 
 
-//Checking if the snake hit the barrier. only checking for the head
+//Checking if the snake hit the barrier. only checking for the head. Returns true if there is collision and false if no collision.
 bool barrier_collision(){
     for (int i = 6; i < 19; i++){
         if (board[6][i] == "O" ){
@@ -272,7 +272,7 @@ bool barrier_collision(){
 }
 
 
-//A function that faciliates moving the snake and "deleting" previous version of it from the board
+// Inputs are snake positions. A function that faciliates moving the snake and "deleting" previous version of it from the board.
 void delete_prev_snake(int snakepos1, int snakepos2){
     //If snake is on the boundary, must replace with #. Otherwise, " "
     if(snakepos1==0||snakepos2==0||snakepos1==space-1||snakepos2==space-1)
@@ -285,7 +285,7 @@ void delete_prev_snake(int snakepos1, int snakepos2){
 }
 
 
-//Making sure the snake is not glitching to unintended positions
+// Inputs are snake positions. Making sure the snake is not glitching to unintended positions.
 void snake_position_regulator(int & snakepos1,int &snakepos2){
     if(snakepos1<0){
         snakepos1+=space;
@@ -298,7 +298,7 @@ void snake_position_regulator(int & snakepos1,int &snakepos2){
 }
 
 
-//The part of the snake that is controllable
+// Inputs are move and previous position of snake. The part of the snake that is controllable.
 void movehead(char move,int prevpos[]){
     int old_snake1=0,old_snake2=0,new_snake1=0,new_snake2=0;
     prevpos[0]=snake_position[0][0];        //storing position before moving
@@ -329,7 +329,7 @@ void movehead(char move,int prevpos[]){
 }
 
 
-//Moving the body of the snake. They will follow whatever part of the snake that came before them
+// Inputs are snakes positions. Moving the body of the snake. They will follow whatever part of the snake that came before them
 void movebody(int i,int prevpos[])
 {
     //similar mechanisms to moving the head
@@ -347,6 +347,7 @@ void movebody(int i,int prevpos[])
     prevpos[1]=old_snake2;
 }
 
+// Inputs are move and previous position of snake.
 //Snake is split into 2 segments. Player can only really control the head
 //Rest of the body follows whatever is in front of them
 void movesnake(char move ,int prevpos[]){
@@ -361,13 +362,13 @@ void movesnake(char move ,int prevpos[]){
 }
 
 
-//A function to increase the size of the snake
+// Input is previous position of snake. A function to increase the size of the snake.
 void inc_snake(int prevpos[]){
     snake_position.push_back({prevpos[0],prevpos[1]});
 }
 
 
-//Displaying the highscores
+// Input is game mode. Displays congrats message and prompts for name to be stored in highscores' files.
 void highscores(int gamemode){
     string name;
     int highscore;
@@ -464,7 +465,7 @@ void highscores(int gamemode){
     }
 }
 
-
+// Messgae on board to be printed when game is officially over.
 void gameover()
 {
     createboard();
@@ -506,7 +507,7 @@ void gameover()
     
 }
 
-
+// Input is game mode. Function which checks conditions for survival of snake. and execute playing part of game.
 void playGame(int gameMode){
     int prevpos[2]={}; //for storing previous part of the moved snake
     char move;
@@ -595,7 +596,8 @@ void initializePoison()
 }
 
 
-//1=Easy, 2=Medium, 3= Hard
+// 1=Easy, 2=Medium, 3= Hard
+// Input is game mode. Function which executes playing part of game.
 void play(int gameMode)
 {
     system("clear");

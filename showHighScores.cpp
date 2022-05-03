@@ -7,7 +7,7 @@ using namespace std;
 
 #include "showHighScores.h"
 
-
+// Function to show highscores for all three game modes. It displays them systematically.
 void showHighScores()
 {
     string playername, display_score;

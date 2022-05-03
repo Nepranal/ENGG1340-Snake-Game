@@ -5,7 +5,7 @@
 
 using namespace std;
 
-
+// Input is string for name of game to be stored in file. Returns true if game with same name exists before and vice versa.
 bool checkName(string name)
 {
     ifstream fin;
@@ -28,7 +28,7 @@ bool checkName(string name)
     return false;
 }
 
-
+// Inputs are game mode, vector(snake), snake position, and score. Prompts for game name to be saved, and saves the game status in the file.
 void saveGame(int gameMode, vector<vector<int>> snake_position, int score)
 {
     ofstream fout;

@@ -5,10 +5,11 @@ using namespace std;
 #include "newGame.h"
 #include "play.h"
 
+// Function prints game mode menu. It prompts user for game mode, and for wrong input asks for input again. On correct game mode input it excutes play function accordingly.
 void newGame()
 {
     system("clear");
-    int gameMode;
+    string gameMode;
 
 
     cout << "____________________Game Mode____________________\n";
@@ -19,19 +20,19 @@ void newGame()
     cout << "Choose Mode.\n";
     cin>>gameMode;
 
-    while (gameMode>4 || gameMode<1)
+    while (gameMode > "4" || gameMode< "1")
     {
         cout<<"Invalid game mode!"<<endl;
         cout<<"Try again"<<endl;
         cin>>gameMode;
     }
 
-    if (gameMode == 4)
+    if (gameMode == "4")
     {
         return;
     }
     else
     {
-        play(gameMode);
+        play(stoi(gameMode));
     }
 }
