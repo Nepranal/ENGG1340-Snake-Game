@@ -74,7 +74,7 @@ Easy Game
 Medium Game
 ![image](https://user-images.githubusercontent.com/99369599/167259422-5a0fc2b9-9833-4c76-99ba-553b461aeabb.png)
 
-Hard game (The hearts are fruits (+5 points), diamonds are posion (insta death))
+Hard game (The hearts are fruits (+5 points), diamonds are poison (insta death))
 ![image](https://user-images.githubusercontent.com/99369599/167259271-c8dfe7ab-9a82-4143-b923-f7ca09e8ebce.png)
 
 
