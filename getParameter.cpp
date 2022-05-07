@@ -27,8 +27,9 @@ void showFile()
     fin.close();
 }
 
-// Inputs are the game mode (easy, medium, hard), the snake (vector), snake's position on the board, and score of the game.
-// With these arguments, it saves the game in the text file which will be later used when game is loaded again. It prompts for name for the game to be saved.
+// Inputs are the game mode (easy, medium, hard), snake's position on the board, and score of the game.
+// With these arguments, it loads the saved game in the text file which will be later used when game is loaded again. It prompts for name for the game to be saved.
+// Doesn't return anything.
 void getParameter(int &gameMode, vector<vector<int>> &snake_position, int &score)
 {
     system("clear");
