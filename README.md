@@ -61,7 +61,9 @@ $./snake
 Quick starts:
 
 Easy game: 1 1
+
 Medium game: 1 2
+
 Hard game: 1 3
 
 
