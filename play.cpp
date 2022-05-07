@@ -604,7 +604,7 @@ void play(int gameMode)
 
     //Initializing
     snake_position={};
-    foodposition[2]={}; fruitposition[2]={}; score=0; space=25;
+    score=0; space=25;
     createboard(); //Initializing the board
     initializePoison();//Initialize the poison array
 
