@@ -39,7 +39,7 @@ Hard would have obstacles, poisonous food represented as “DIAMOND "\xE2\x99\xA
 
 When the game is over, a message will be printed on screen.
 
-Objective: survive as long as you can while evading to eat yourself, hit barrier or eating poision. In Hard Mode, you need to eat food or other fruit/heart in a way that there are less poisions on the board and the board remains mostly clear so you can move snake easily. Try to eat food by reaching it by shortest distance possible so less poisions are on the board. You can move the snake with the W A S D keys.
+Objective: survive as long as you can while evading to eat yourself, hit barrier or eating poison. In Hard Mode, you need to eat food or other fruit/heart in a way that there are less poisions on the board and the board remains mostly clear so you can move snake easily. Try to eat food by reaching it by shortest distance possible so less poisons are on the board. You can move the snake with the W A S D keys.
 
 Several features will be included in game:
 Food with different symbol that will increase the score in hard mode.
