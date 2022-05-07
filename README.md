@@ -73,14 +73,20 @@ Game Over screen
 
 Killed by barriers
 ![image](https://user-images.githubusercontent.com/99369599/167259616-a1097992-c3f3-4f23-b112-b4ab3143a7b9.png)
+
+
 ![image](https://user-images.githubusercontent.com/99369599/167259457-1f92cde9-1637-402a-83da-f0fa374bd2c0.png)
 
 Killed by poison
 ![image](https://user-images.githubusercontent.com/99369599/167259686-dd256463-878f-4e9f-aa29-025a28f17d7b.png)
+
+
 ![image](https://user-images.githubusercontent.com/99369599/167259457-1f92cde9-1637-402a-83da-f0fa374bd2c0.png)
 
 Killed by biting yourself
 ![image](https://user-images.githubusercontent.com/99369599/167259760-57107b57-4f8f-46ad-a7e0-aa1e9c45665b.png)
+
+
 ![image](https://user-images.githubusercontent.com/99369599/167259457-1f92cde9-1637-402a-83da-f0fa374bd2c0.png)
 
 
