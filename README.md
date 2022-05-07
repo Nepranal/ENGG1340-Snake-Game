@@ -39,12 +39,12 @@ When the game is over, a message will be printed on screen.
 
 Objective: survive as long as you can while evading to eat yourself, hit barrier or eating poision. In Hard Mode, you need to eat food or other fruit/heart in a way that there are less poisions on the board and the board remains mostly clear so you can move snake easily. Try to eat food by reaching it by shortest distance possible so less poisions are on the board.
 
-Several features will be included in game: (Optional)
-Food with different symbol that will increase the score.
+Several features will be included in game:
+Food with different symbol that will increase the score in hard mode.
 Poison with different symbol that will kill the snake. (Poison is symbolized with the diamond symbols)
 Barriers with different symbol. If you touch barrier, you will die.
 You can move around the board.
-Your Highscores will be saved (press x) and you can store many games and resume it again.
+Your Highscores will be saved (input x) and you can store many games and resume it again.
 
 To create and play the game:
 Download the file zip
