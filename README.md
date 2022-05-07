@@ -58,7 +58,11 @@ $make snake
 
 $./snake
 
-"Quick start" a new easy game : input: 1 1
+Quick starts:
+
+Easy game: 1 1
+Medium game: 1 2
+Hard game: 1 3
 
 
 Cases:
