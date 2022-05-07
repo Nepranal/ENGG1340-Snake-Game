@@ -69,21 +69,25 @@ Hard game (The hearts are fruits (+5 points), diamonds are posion (insta death))
 
 
 Game Over screen
+
 ![image](https://user-images.githubusercontent.com/99369599/167259457-1f92cde9-1637-402a-83da-f0fa374bd2c0.png)
 
 Killed by barriers
+
 ![image](https://user-images.githubusercontent.com/99369599/167259616-a1097992-c3f3-4f23-b112-b4ab3143a7b9.png)
 
 
 ![image](https://user-images.githubusercontent.com/99369599/167259457-1f92cde9-1637-402a-83da-f0fa374bd2c0.png)
 
 Killed by poison
+
 ![image](https://user-images.githubusercontent.com/99369599/167259686-dd256463-878f-4e9f-aa29-025a28f17d7b.png)
 
 
 ![image](https://user-images.githubusercontent.com/99369599/167259457-1f92cde9-1637-402a-83da-f0fa374bd2c0.png)
 
 Killed by biting yourself
+
 ![image](https://user-images.githubusercontent.com/99369599/167259760-57107b57-4f8f-46ad-a7e0-aa1e9c45665b.png)
 
 
@@ -91,23 +95,29 @@ Killed by biting yourself
 
 
 High Scores board
+
 ![image](https://user-images.githubusercontent.com/99369599/167259732-de3f056a-e8d2-4cb7-b999-f097b45fd279.png)
 
 
 
 Getting a new High score
+
 ![image](https://user-images.githubusercontent.com/99369599/167259537-cb487ad3-a755-4bf6-9f38-78bbb1a12036.png)
 
 Load game saves
+
 ![image](https://user-images.githubusercontent.com/99369599/167259362-020dc68f-c9fd-4d15-bd79-42ca21245ee2.png)
 
 Menu
+
 ![image](https://user-images.githubusercontent.com/99369599/167259311-3c6978bd-8945-4cee-8947-2c7a9d038434.png)
 
 Instructions
+
 ![image](https://user-images.githubusercontent.com/99369599/167259333-c27a301b-646b-482b-9407-68992671fce0.png)
 
 
 Game Saving
+
 ![image](https://user-images.githubusercontent.com/99369599/167259288-fd05d0f7-48ae-4e51-ae13-0914cb0d24ab.png)
 
